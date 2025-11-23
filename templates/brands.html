@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}Brands - Auto Site{% endblock %}
+{% block content %}
+  <h2>Brands</h2>
+
+  {% if brands %}
+    <table class="table">
+      <tr><th>Name</th><th>Country</th><th>Models</th></tr>
+      {% for b in brands %}
+      <tr>
+        <td>{{ b.name }}</td>
+        <td>{{ b.country or 'Unknown' }}</td>
+        <td><a class="button" href="/brands/{{ b.id }}/models">View Models</a></td>
+      </tr>
+      {% endfor %}
+    </table>
+  {% else %}
+    <p>No brands added yet.</p>
+  {% endif %}
+{% endblock %}

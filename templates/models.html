@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}Models - {{ brand.name }}{% endblock %}
+{% block content %}
+  <h2>Models for {{ brand.name }}</h2>
+
+  <p><a class="button" href="/brands/{{ brand.id }}/models/add">Add a Model</a></p>
+
+  {% if models %}
+    <table class="table">
+      <tr><th>Name</th><th>NCAP</th><th>Stopping Distance</th><th>Turning Radius</th></tr>
+      {% for m in models %}
+      <tr>
+        <td>{{ m.name }}</td>
+        <td>{{ m.ncap_rating or '-' }}</td>
+        <td>{{ m.stopping_distance or '-' }}</td>
+        <td>{{ m.turning_radius or '-' }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  {% else %}
+    <p>No models added yet.</p>
+  {% endif %}
+{% endblock %}

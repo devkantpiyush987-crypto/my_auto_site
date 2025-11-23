@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}Add Model{% endblock %}
+{% block content %}
+  <h2>Add Model for {{ brand.name }}</h2>
+
+  <form method="post">
+    <label class="label">Model Name</label>
+    <input class="input" type="text" name="name" required>
+
+    <label class="label">NCAP Rating (optional)</label>
+    <input class="input" type="text" name="ncap">
+
+    <label class="label">Stopping Distance</label>
+    <input class="input" type="text" name="stopping_distance">
+
+    <label class="label">Turning Radius</label>
+    <input class="input" type="text" name="turning_radius">
+
+    <button class="button" type="submit">Add Model</button>
+  </form>
+{% endblock %}

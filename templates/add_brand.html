@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}Add Brand{% endblock %}
+{% block content %}
+  <h2>Add a New Brand</h2>
+
+  <form method="post">
+    <label class="label">Brand Name</label>
+    <input class="input" type="text" name="name" required>
+
+    <label class="label">Country (optional)</label>
+    <input class="input" type="text" name="country">
+
+    <button class="button" type="submit">Add Brand</button>
+  </form>
+{% endblock %}

@@ -1,0 +1,110 @@
+/* Beginner-friendly styles: clear, large text and buttons */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #1a1a1a;
+  color: white;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+.header {
+  background: #0b6efd;
+  color: white;
+  padding: 18px 16px;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 600;
+}
+.nav {
+  background: #ffffff;
+  border-bottom: 1px solid #e2e6ea;
+  padding: 10px 16px;
+  display: flex;
+  gap: 12px;
+}
+.nav a {
+  text-decoration: none;
+  background: #e9f2ff;
+  padding: 10px 14px;
+  border-radius: 8px;
+  color: #0b6efd;
+  font-weight: 600;
+}
+.container {
+  max-width: 880px;
+  margin: 24px auto;
+  padding: 18px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(12, 20, 30, 0.04);
+}
+h1, h2 {
+  color: #0b3d91;
+}
+p.lead {
+  font-size: 18px;
+  margin-bottom: 14px;
+  color: #333;
+}
+.label {
+  display: block;
+  margin: 10px 0 6px;
+  font-weight: 700;
+}
+.input, input[type="text"], input[type="number"], textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #dce6f8;
+  border-radius: 6px;
+  font-size: 15px;
+}
+.button {
+  display: inline-block;
+  padding: 10px 16px;
+  margin-top: 12px;
+  background: #0b6efd;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+}
+.small-note {
+  margin-top: 8px;
+  color: #666;
+  font-size: 13px;
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+.table th, .table td {
+  border: 1px solid #eef4ff;
+  padding: 8px 10px;
+  text-align: left;
+}
+.footer {
+  text-align: center;
+  padding: 14px;
+  font-size: 13px;
+  color: #666;
+  margin-top: 18px;
+}
+/* Make table text visible on light table background */
+.table, .table th, .table td {
+  color: #111 !important;      /* dark text so it shows on white cells */
+}
+
+/* ensure links/buttons in the table keep their styles */
+.table a, .table a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* optional: slightly darker table header */
+.table th {
+  color: #0b3b66;
+  font-weight: 600;
+}
